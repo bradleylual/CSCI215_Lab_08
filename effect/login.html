@@ -64,7 +64,16 @@
 <script src="../_js/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-
+	$('#open').click(function(evt) {
+		evt.preventDefault();
+		if($('#login form').is(':hidden')) {
+            $('#login form').slideToggle(300);
+            $(this).toggleClass('close');
+		} else {
+		    $('#login form').slideUp(600);
+		    $(this).removeClass('close');
+		}
+	}); // end click
 }); // end ready
 </script>
 </head>
